@@ -1,9 +1,3 @@
-import React from 'react'
+import SortableContainer from './SortableContainer'
+export default SortableContainer
 
-export default React.createClass({
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-})
