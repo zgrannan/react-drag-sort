@@ -1,5 +1,5 @@
 {
-  "name": "react-sortable",
+  "name": "react-drag-sort",
   "version": "1.0.0",
   "description": "react-sortable React component",
   "main": "lib/index.js",
