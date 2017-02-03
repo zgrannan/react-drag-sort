@@ -1,4 +1,4 @@
-# react-sortable
+# react-drag-sort
 
 generic component for draggable sort
 
