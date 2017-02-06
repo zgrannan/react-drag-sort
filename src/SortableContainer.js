@@ -90,6 +90,11 @@ class SortableContainer extends React.Component {
         key={key}
         id={key}
         index={index}
+        onRemove={() => {
+          const index = R.findIndex(i => i.key === key, collection)
+          const newCollection = R.remove(index, 1, collection)
+          onChange(newCollection)
+        }}
         onChange={value => {
           const index = R.findIndex(i => i.key === key, collection)
           const newCollection = R.adjust(R.assoc('value', value), index, collection)

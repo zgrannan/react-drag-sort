@@ -83,14 +83,14 @@ class SortableItem extends React.Component {
   }
 
   render () {
-    const { Component, isDragging, value, onChange, index, connectDragSource } = this.props
+    const { Component, isDragging, value, onChange, onRemove, index, connectDragSource } = this.props
     const opacity = isDragging ? 0 : 1
 
     console.log('render SortableItem')
 
     return this.decorateSortableItemElement(
       <div style={{opacity}}>
-        <Component value={value} onChange={onChange} index={index} decorateHandle={connectDragSource} />
+        <Component value={value} onRemove={onRemove} onChange={onChange} index={index} decorateHandle={connectDragSource} />
       </div>
     )
   }

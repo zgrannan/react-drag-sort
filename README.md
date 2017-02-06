@@ -25,10 +25,11 @@ class Demo extends React.Component {
     }
   }
 
-  Item ({value, index, onChange, decorateHandle}) {
+  Item ({value, index, onChange, onRemove, decorateHandle}) {
     return (
       <div>
-        {decorateHandle(<span>+ </span>)}
+        <span onClick={onRemove}>X</span>
+        {decorateHandle(<span>+</span>)}
         <input
           onChange={e => {
             const val = e.target.value
