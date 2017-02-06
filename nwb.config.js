@@ -3,7 +3,7 @@ module.exports = {
   npm: {
     esModules: true,
     umd: {
-      global: 'ReactSortable',
+      global: 'ReactDragSort',
       externals: {
         react: 'React'
       }
