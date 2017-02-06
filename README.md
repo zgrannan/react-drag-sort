@@ -4,6 +4,8 @@ generic component for draggable sort
 
 based on react-dnd
 
+[try it on codepen](http://codepen.io/amonks/pen/EZROVM?editors=1010)
+
 ```javascript
 import React from 'react'
 import {render} from 'react-dom'
