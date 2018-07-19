@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import PropTypes from 'prop-types'
+import React from 'react'
 import autobind from 'autobind-decorator'
 import R from 'ramda'
 import { DropTarget, DragDropContext } from 'react-dnd'
@@ -23,7 +24,6 @@ const itemTarget = {
 @DropTarget(itemType, itemTarget, connectDropTarget)
 class SortableContainer extends React.Component {
   static propTypes = {
-    connectDropTarget: PropTypes.func.isRequired,
     collection: PropTypes.array.isRequired,
     onChange: PropTypes.func.isRequired,
     Component: PropTypes.func.isRequired

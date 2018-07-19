@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import PropTypes from 'prop-types'
+import React from 'react'
 import R from 'ramda'
 import autobind from 'autobind-decorator'
 import { DragSource, DropTarget } from 'react-dnd'
@@ -69,7 +70,7 @@ class SortableItem extends React.Component {
     Component: PropTypes.func.isRequired,
     connectDragPreview: PropTypes.func.isRequired,
     connectDragSource: PropTypes.func.isRequired,
-    connectDropTarget: PropTypes.func.isRequired,
+    connectDropTarget: PropTypes.func,
     index: PropTypes.number.isRequired,
     isDragging: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
@@ -85,8 +86,6 @@ class SortableItem extends React.Component {
   render () {
     const { Component, isDragging, value, onChange, onRemove, index, connectDragSource } = this.props
     const opacity = isDragging ? 0 : 1
-
-    console.log('render SortableItem')
 
     return this.decorateSortableItemElement(
       <div style={{opacity}}>
